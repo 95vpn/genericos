@@ -6,26 +6,26 @@ using System.Threading.Tasks;
 
 namespace genericos
 {
-    public class AlmacenObjetos
+    public class AlmacenObjetos<T>
     {
         public AlmacenObjetos(int z) 
         {
-            datosElemento = new object[z];
+            datosElemento = new T[z];
         }
 
-        public void agregar(Object obj)
+        public void agregar( T obj)
         {
             datosElemento[i] = obj;
 
             i++;
         }
 
-        public Object getElemento(int i)
+        public T getElemento(int i)
         {
             return datosElemento[i];
         }
 
-        private Object[] datosElemento;
+        private T[] datosElemento;
 
         private int i = 0;
     }

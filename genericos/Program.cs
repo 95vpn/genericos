@@ -10,7 +10,11 @@ namespace genericos
     {
         static void Main(string[] args)
         {
-            AlmacenObjetos archivos = new AlmacenObjetos(4);
+            //AlmacenObjetos<Empleado> archivos = new AlmacenObjetos<Empleado>(4);
+
+            //AlmacenObjetos<String> archivos = new AlmacenObjetos<String>(4);
+
+            AlmacenObjetos<DateTime> archivos = new AlmacenObjetos<DateTime>(4);
 
             /*
             archivos.agregar("Juan");
@@ -19,15 +23,24 @@ namespace genericos
             archivos.agregar("Sandra");
             */
 
+
+            /*
             archivos.agregar(new Empleado(1500));
             archivos.agregar(new Empleado(2500));
             archivos.agregar(new Empleado(3500));
             archivos.agregar(new Empleado(4500));
+            */
 
-            //String nombrePersona = (String)archivos.getElemento(2
-            Empleado salarioEmpleado = (Empleado)archivos.getElemento(2);
+            archivos.agregar(new DateTime());
+            archivos.agregar(new DateTime());
+            archivos.agregar(new DateTime());
+            archivos.agregar(new DateTime());
 
-            Console.WriteLine(salarioEmpleado.getSalario());
+            //String nombrePersona = archivos.getElemento(2);
+            //Empleado salarioEmpleado = archivos.getElemento(2);
+            DateTime salarioEmpleado = archivos.getElemento(2);
+
+            Console.WriteLine(salarioEmpleado);
         }
     }
 }
